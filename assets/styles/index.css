@@ -1,0 +1,201 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: white;
+	font-family: sans-serif;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.wrapper .header, .wrapper .content {
+	/* Cheap hack to center tiles (absolutely positioned). */
+	padding: 0 3% 0 7%;
+	margin: 0 auto;
+}
+
+.wrapper .header {
+	text-align: center;
+	background-color: #F1F2F2;
+	min-height: 60px;
+	color: #58595b;
+	padding: 20px 0;
+	border-bottom: 1px solid #d9dbdb;
+	margin-bottom: 50px;
+}
+
+.wrapper .header h3 {
+	font-family: serif;
+}
+
+.content:hover > .tile {
+  opacity: .3;
+}
+
+.content > .tile:hover {
+   opacity:1;
+}
+
+.wrapper .content .tile {
+	text-align: center;
+	width: 33%;
+	padding-bottom: 33%;
+	position: relative;
+	float: left;
+}
+
+.wrapper .content .tile .lightbox {
+	display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .75);
+  z-index: 100;
+  text-align: left;
+}
+
+.wrapper .content .tile .lightbox .info {
+	border: none;
+	background-color: white;
+	width: 50%;
+	min-height: 300px;
+	margin: 0 auto !important;
+	cursor: default;
+	top: 10%;
+	left: 22%;
+	padding: 3%;
+	position: absolute;
+}
+
+.wrapper .content .tile .lightbox .info h5 {
+	font-weight: bold;
+	letter-spacing: 0;
+}
+
+.wrapper .content .tile .lightbox .info .charts {
+	width: 100%;
+	display: block;
+	margin: 10px auto;
+	clear: both;
+	height: 100%
+}
+
+.wrapper .content .tile .lightbox .info .response {
+	width: 50%;
+	display: block;
+	float: left;
+	margin: 0 auto;
+}
+
+.wrapper .content .tile .lightbox .info .response p {
+	text-align: center;
+	font-weight: 200;
+	padding: 10px;
+}
+
+.wrapper .content .tile .lightbox .info .response img {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.wrapper .content .tile .lightbox .info h6 {
+	border-bottom: 2px solid lightgray;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 30px;
+}
+
+.wrapper .content .tile .lightbox .info .comments p {
+	margin-top: 10px;
+	border-top: 1px solid lightgray;
+	padding: 15px 0 5px 0;
+}
+
+.wrapper .content .tile .lightbox .info .comments p:first-child {
+	border-top: none;
+}
+
+.wrapper .content .tile .body {
+	margin: 0 auto;
+	position: absolute;
+	height: 80%;
+	width: 80%;
+	padding: 5% 5%;
+	border: 1px solid #d9dbdb;
+	cursor: pointer;
+}
+
+.wrapper .content .tile .body .table {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.wrapper .content .tile .body .table .table-cell {
+	display: table-cell;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+}
+.wrapper .content .tile .body h5, .question {
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-size: 1vw;
+}
+
+.wrapper .content .tile .body .table .table-cell img.chart {
+	bottom: 7%;
+	width: 80%;
+	height: 70%;
+	position: absolute;
+	right: 10%;
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px), (max-width: 420px), (max-width: 499px) {
+	.wrapper .content .tile {
+		width: 50%;
+		height: auto;
+	}
+}
+
+@media (max-width: 420px), (max-width: 600px) {
+	.wrapper .header h1 {
+		font-size: 25px;
+		padding: 0 15px;
+	}
+
+	.wrapper .content .tile {
+		width: 100%;
+		min-height: 400px;
+	}
+
+	.wrapper .content .tile .lightbox .info .response {
+		width: 100%;
+	}
+
+	.wrapper .content .tile .body h5 {
+		font-size: 100%;
+	}
+
+	.content:hover > .tile {
+	  opacity: 1;
+	}
+
+	.content > .tile:hover {
+	   opacity:1;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+	.wrapper .content .tile {
+		width: 100%;
+	}
+}
