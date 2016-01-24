@@ -195,7 +195,29 @@ body {
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+	.wrapper .header h1 {
+		font-size: 25px;
+		padding: 0 15px;
+	}
+
 	.wrapper .content .tile {
 		width: 100%;
+		min-height: 400px;
+	}
+
+	.wrapper .content .tile .lightbox .info .response {
+		width: 100%;
+	}
+
+	.wrapper .content .tile .body h5 {
+		font-size: 100%;
+	}
+
+	.content:hover > .tile {
+	  opacity: 1;
+	}
+
+	.content > .tile:hover {
+	   opacity:1;
 	}
 }
